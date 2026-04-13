@@ -93,6 +93,16 @@
             text-shadow: 0 0 10px var(--accent-yellow);
         }
 
+        .scroller-label {
+            width: 100%;
+            text-align: center;
+            color: var(--accent-cyan);
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
         .scroller-container {
             width: 100%;
             overflow: hidden;
@@ -106,7 +116,7 @@
             display: flex;
             gap: 20px;
             width: max-content;
-            animation: scroll 10s linear infinite;
+            animation: scroll 15s linear infinite;
         }
 
         @keyframes scroll { 
@@ -151,6 +161,24 @@
             transition: 0.3s;
         }
         .input-placeholder:hover { border-color: var(--accent-yellow); color: var(--accent-yellow); }
+
+        .game-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            border: 2px solid var(--accent-pink);
+            color: var(--accent-pink);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: 0.3s;
+            background: rgba(255, 0, 255, 0.05);
+        }
+        .game-link:hover {
+            background: var(--accent-pink);
+            color: black;
+            box-shadow: 0 0 20px var(--accent-pink);
+        }
 
         @keyframes logo-glitch {
             0%, 88%, 93%, 95% { opacity: 1; }
@@ -205,7 +233,7 @@
         <div class="info-grid">
             <div class="card">
                 <h3>YOU SHIP:</h3>
-                <p>A project built with a <strong>non-traditional input</strong>.</p>
+                <p>A project built with a <strong>non-traditional input</strong> (majority of the input doesn't use a mouse or keyboard).</p>
             </div>
             <div class="card">
                 <h3>WE SHIP:</h3>
@@ -225,8 +253,16 @@
             <div class="input-placeholder">VOICE COMMANDS</div>
             <div class="input-placeholder">... A POTATO?</div>
         </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <p style="color: var(--accent-yellow); letter-spacing: 2px;">READY TO SEE IT IN ACTION?</p>
+            <h3 style="margin: 10px 0;">TRY OUT THIS EXAMPLE GAME:</h3>
+            <a href="https://nitya-desaraju.github.io/the_archivist_improved/" target="_blank" class="game-link">THE ARCHIVIST</a>
+        </div>
     </section>
 
+    <div class="scroller-label">here are some of the rewards you can get!</div>
+    
     <div class="scroller-container">
         <div class="scroller-inner">
             <div class="prize-box">
@@ -241,6 +277,10 @@
                 <img src="assets/neon.png" alt="Neon Sign Grant" width="120">
                 <span class="prize-caption">Neon Sign Grant</span>
             </div>
+            <div class="prize-box">
+                <img src="assets/steam.png" alt="Steam Gift Card" width="120">
+                <span class="prize-caption">Steam Gift Card</span>
+            </div>
             
             <div class="prize-box">
                 <img src="assets/raspberrypi.png" alt="Raspberry Pi" width="120">
@@ -254,6 +294,10 @@
                 <img src="assets/neon.png" alt="Neon Sign Grant" width="120">
                 <span class="prize-caption">Neon Sign Grant</span>
             </div>
+            <div class="prize-box">
+                <img src="assets/steam.png" alt="Steam Gift Card" width="120">
+                <span class="prize-caption">Steam Gift Card</span>
+            </div>
 
             <div class="prize-box">
                 <img src="assets/raspberrypi.png" alt="Raspberry Pi" width="120">
@@ -266,6 +310,10 @@
             <div class="prize-box">
                 <img src="assets/neon.png" alt="Neon Sign Grant" width="120">
                 <span class="prize-caption">Neon Sign Grant</span>
+            </div>
+            <div class="prize-box">
+                <img src="assets/steam.png" alt="Steam Gift Card" width="120">
+                <span class="prize-caption">Steam Gift Card</span>
             </div>
         </div>
     </div>
