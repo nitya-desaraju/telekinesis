@@ -81,9 +81,40 @@
             filter: contrast(1.1) brightness(0.9);
         }
 
+        .logo-container {
+            position: absolute;
+            top: 150px; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+        }
+
+        .flicker-logo {
+            width: 700px; 
+            height: auto;
+            position: relative;
+            z-index: 2000;
+            
+            animation: logo-glitch 4s linear infinite;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+        }
+
+        @keyframes logo-glitch {
+            0%, 88%, 93%, 95% { opacity: 1; filter: brightness(1); }
+            90% { opacity: 0.7; filter: brightness(1.2); }
+            94% { opacity: 0.4; filter: brightness(0.8); }
+            96% { opacity: 1; filter: brightness(1.5); }
+            100% { opacity: 1; filter: brightness(1); }
+        }
+
     </style>
 </head>
 <body>
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Telekinesis Logo" class="flicker-logo">
+    </div>
 
     <a href="https://hackclub.com" target="_blank" class="hc-badge-anchor">
         <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Badge" class="hc-badge-img">
