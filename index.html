@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELEKINESIS</title>
+    <style>
+        :root {
+            --bg-color: #111111; 
+        }
+
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0) 50%, 
+                rgba(0, 0, 0, 0.4) 50%
+            ), 
+            linear-gradient(
+                90deg, 
+                rgba(255, 0, 0, 0.05), 
+                rgba(0, 255, 0, 0.03), 
+                rgba(0, 0, 255, 0.05)
+            );
+            z-index: 2000;
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(18, 16, 16, 0.1);
+            opacity: 0;
+            z-index: 2001;
+            pointer-events: none;
+            animation: flicker 0.15s infinite;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.1; }
+            50% { opacity: 0.2; }
+            100% { opacity: 0.1; }
+        }
+
+        .hc-badge-anchor {
+            position: fixed;
+            top: -10px; 
+            left: 30px;
+            z-index: 1000;
+            transition: transform 0.25s ease-out;
+            cursor: pointer;
+        }
+
+        .hc-badge-anchor:hover {
+            transform: translateY(10px);
+        }
+
+        .hc-badge-img {
+            width: 120px;
+            height: auto;
+            display: block;
+            filter: contrast(1.1) brightness(0.9);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="https://hackclub.com" target="_blank" class="hc-badge-anchor">
+        <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club Badge" class="hc-badge-img">
+    </a>
+
+</body>
+</html>
