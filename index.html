@@ -322,5 +322,13 @@
         made with ❤️ by nitya @ hack club
     </footer>
 
+    <script>
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rsvpUrl = "https://nityadesaraju.fillout.com/telekinesis";
+            window.open(rsvpUrl, '_blank');
+        });
+    </script>
+
 </body>
 </html>
